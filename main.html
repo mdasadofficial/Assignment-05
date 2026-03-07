@@ -39,7 +39,7 @@
 
 
 <!-- Buttons -->
-<div class=" rounded w-8/12 shadow-sm flex justify-start  gap-2 p-4 mx-auto mt-10">
+<div class=" rounded w-10/12 shadow-sm flex justify-start  gap-2 p-4 mx-auto mt-10">
     <button id="allBtn" class="btn btn-primary btn-sm w-[80px] ">All</button>
     <button id="openBtn" class="btn btn-sm btn-soft w-[80px]">Open</button>
     <button id="closedBtn" class="btn btn-sm btn-soft w-[80px]">Close</button>
@@ -47,71 +47,49 @@
 
 
 
-<!-- Issues Container -->
-<div class=" w-8/12 shadow-sm mx-auto">
-    <!-- JS will populate issues cards here -->
 
-    <div class=" rounded gap-4 p-4 bg-green-200 ">
-      <div>
-<div>
-    <img src=".//B13-A5-Github-Issue-Tracker/assets/Aperture.png" alt="">
-    <h3>50 Issues</h3>
-    <p>Track and manage your project issues</p>
-</div>
-      </div>
-      <div>
+<!-- Issues Section -->
+<div class=" w-10/12 shadow-sm mx-auto">
+    <!-- Issues Title Box -->
+ 
 
-      </div>
-    </div>
+    <div class=" flex  lg:justify-between shadow-sm p-5 rounded-box">
+               <div class="flex gap-2">
+                 <img class="w-15 max-w-15" src=".//B13-A5-Github-Issue-Tracker/assets/Aperture.png" alt="">
+                <div>
+                    <h3 class="text-2xl font-bold"><span id="issues-count" class="font-bold">50</span> Issues</h3>
+                    <p class="text-gray-400">Track and manage your project issues</p>
+                </div>
+               </div>
+              
+               <div class=" flex gap-4 items-center ">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-circle text-success"></i><p>Open</p></span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-circle text-[#a855f7]"></i><p>Closed</p></span>
+               </div>
+            </div>
 
-    <div id=" issuesContainer" class="rounded grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-blue-500">
-        <div class="card bg-base-100 w-96 shadow-sm">
-            <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">
-                    Card Title
-                    <div class="badge badge-secondary">NEW</div>
-                </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="card-actions justify-end">
-                    <div class="badge badge-outline">Fashion</div>
-                    <div class="badge badge-outline">Products</div>
+    <!-- issues Container -->
+    <div id=" issuesContainer"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-8 mt-5 shadow-2xl rounded-box">
+
+        <!-- Card Div-->
+        <div
+            class="card border-t-5 border-green-500 bg-base-100 shadow-sm p-5 space-y-3 h-auto cursor-pointer hover:shadow-md transition">
+            <div class="flex justify-between">
+                <img src="./B13-A5-Github-Issue-Tracker/assets/Open-Status.png" alt="open status">
+                <div class="badge badge-soft badge-error">HIGH</div>
+            </div>
+            <h3 class="text-xl font-bold line-clamp-2">Implement real-time notifications</h3>
+            <p class="line-clamp-2 text-gray-400">Add WebSocket support for real-time notifications when issues are
+                updated or commented on.</p>
+            <div class="flex gap-3 mt-3 flex-wrap">
+                <div class="badge badge-soft badge-success">
+                    <span class="mr-1"><i class="fa-solid fa-wand-magic-sparkles"></i></span>ENHANCEMENT
                 </div>
             </div>
-        </div>
-        <div class="card bg-base-100 w-96 shadow-sm">
-            <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">
-                    Card Title
-                    <div class="badge badge-secondary">NEW</div>
-                </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="card-actions justify-end">
-                    <div class="badge badge-outline">Fashion</div>
-                    <div class="badge badge-outline">Products</div>
-                </div>
-            </div>
-        </div>
-        <div class="card bg-base-100 w-96 shadow-sm">
-            <figure>
-                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
-            </figure>
-            <div class="card-body">
-                <h2 class="card-title">
-                    Card Title
-                    <div class="badge badge-secondary">NEW</div>
-                </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div class="card-actions justify-end">
-                    <div class="badge badge-outline">Fashion</div>
-                    <div class="badge badge-outline">Products</div>
-                </div>
-            </div>
+            <hr>
+            <p>alex_perf</p>
+            <p>1/23/2024</p>
         </div>
     </div>
 </div>
