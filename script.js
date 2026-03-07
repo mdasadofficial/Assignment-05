@@ -1,17 +1,24 @@
 
 
 
+const loadSpinner = document.getElementById("loadSpinner");
 
 const loadCards = () => {
+    loadSpinner.classList.remove("hidden") //LoadingSpinner Hidden Remove
+    loadSpinner.classList.add("flex")  //LoadingSpinner Hidden Add
     fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
         .then((res) => res.json())
-        .then((json) => displayCards(json.data));
+        .then((json) => displayCards(json.data))
+        .catch((err) => console.log(err));
+        
 
 };
 
 
 const displayCards = (cards) => {
+    loadSpinner.classList.add("hidden");
     const issuesContainer = document.getElementById("issuesContainer");
+
     issuesContainer.innerHTML = "";
     for (let card of cards) {
         console.log(card);
@@ -37,8 +44,8 @@ const displayCards = (cards) => {
 
            
                <div class="badge badge-soft ${label === "bug" ? "badge-error" :
-                    label === "enhancement" ? "badge-success" :
-                        label === "documentation" ? "badge-info" : "badge-secondary"}">
+                            label === "enhancement" ? "badge-success" :
+                                label === "documentation" ? "badge-info" : "badge-secondary"}">
                         
                <span class="mr-1"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
                 ${label.toUpperCase()}
