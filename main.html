@@ -17,21 +17,22 @@
 
 <!-- NavBar -->
 
-<nav class="flex items-center justify-between p-2 bg-gray-100 shadow">
+<nav class="flex flex-col md:flex-row md:items-center md:justify-between p-3 bg-gray-100 shadow gap-3">
 
     <!-- Left Nav -->
-    <div class="flex items-center px-3">
+    <div class="flex items-center gap-2">
         <img class="w-6 h-6" src="./B13-A5-Github-Issue-Tracker/assets/github-logo.png" alt="GitHub Logo" />
-
-        <h2 class="text-lg font-semibold m-5">GitHub Issues Tracer</h2>
-
+        <h2 class="text-lg md:text-xl font-semibold">GitHub Issues Tracer</h2>
     </div>
 
     <!-- Right Nav (Search Box) -->
-    <div class="flex gap-3 py-3 px-3">
+    <div class="flex w-full md:w-auto gap-2">
         <input id="searchInput" type="text" placeholder="Search issues..."
-            class="input input-bordered btn-sm w-64 rounded" />
-        <button id="searchBtn" class="btn btn-sm btn-primary rounded"><i class="fa-solid fa-magnifying-glass"></i>Search
+            class="input input-bordered input-sm w-full md:w-64 rounded" />
+
+        <button id="searchBtn" class="btn btn-sm btn-primary rounded">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span class="hidden md:inline">Search</span>
         </button>
     </div>
 
@@ -51,29 +52,43 @@
 <!-- Issues Section -->
 <div class=" w-10/12 shadow-sm mx-auto">
     <!-- Issues Title Box -->
- 
 
-    <div class=" flex  lg:justify-between shadow-sm p-5 rounded-box">
-               <div class="flex gap-2">
-                 <img class="w-15 max-w-15" src=".//B13-A5-Github-Issue-Tracker/assets/Aperture.png" alt="">
-                <div>
-                    <h3 class="text-2xl font-bold"><span id="issues-count" class="font-bold">50</span> Issues</h3>
-                    <p class="text-gray-400">Track and manage your project issues</p>
-                </div>
-               </div>
-              
-               <div class=" flex gap-4 items-center ">
-                <span class="flex items-center gap-2"><i class="fa-solid fa-circle text-success"></i><p>Open</p></span>
-                <span class="flex items-center gap-2"><i class="fa-solid fa-circle text-[#a855f7]"></i><p>Closed</p></span>
-               </div>
+
+    <div class="flex flex-col md:flex-row md:justify-between gap-4 shadow-sm p-5 rounded-box">
+
+        <div class="flex gap-2 items-center">
+            <img class="w-12 md:w-15" src="./B13-A5-Github-Issue-Tracker/assets/Aperture.png" alt="">
+
+            <div>
+                <h3 class="text-xl md:text-2xl font-bold">
+                    <span id="issues-count" class="font-bold">50</span> Issues
+                </h3>
+                <p class="text-gray-400 text-sm md:text-base">
+                    Track and manage your project issues
+                </p>
             </div>
+        </div>
+
+        <div class="flex gap-4 items-center">
+            <span class="flex items-center gap-2">
+                <i class="fa-solid fa-circle text-success"></i>
+                <p>Open</p>
+            </span>
+
+            <span class="flex items-center gap-2">
+                <i class="fa-solid fa-circle text-[#a855f7]"></i>
+                <p>Closed</p>
+            </span>
+        </div>
+
+    </div>
 
     <!-- issues Container -->
-    <div id=" issuesContainer"
+    <div id="issuesContainer"
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-8 mt-5 shadow-2xl rounded-box">
 
         <!-- Card Div-->
-        <div
+        <!-- <div
             class="card border-t-5 border-green-500 bg-base-100 shadow-sm p-5 space-y-3 h-auto cursor-pointer hover:shadow-md transition">
             <div class="flex justify-between">
                 <img src="./B13-A5-Github-Issue-Tracker/assets/Open-Status.png" alt="open status">
@@ -90,7 +105,8 @@
             <hr>
             <p>alex_perf</p>
             <p>1/23/2024</p>
-        </div>
+        </div> -->
+        
     </div>
 </div>
 
