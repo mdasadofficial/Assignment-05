@@ -51,8 +51,9 @@
 
 <!-- Issues Section -->
 <div class=" w-10/12 shadow-sm mx-auto">
-    <!-- Issues Title Box -->
 
+
+    <!-- Issues Title Box -->
 
     <div class="flex flex-col md:flex-row md:justify-between gap-4 shadow-sm p-5 rounded-box">
 
@@ -118,7 +119,44 @@
     </div>
 </div>
 
-<script src="script.js"></script>
+<script src="scrit.js"></script>
+<!-- The button to open modal -->
+<label for="my_modal_6" class="btn">open modal</label>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my_modal_6" class="modal-toggle" />
+<div class="modal" role="dialog">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">This modal works with a hidden checkbox!</p>
+    <div class="modal-action">
+      <label for="my_modal_6" class="btn">Close!</label>
+    </div>
+  </div>
+</div>
+<div
+           class="card border-t-5 border-green-500 bg-base-100 shadow-sm p-5 space-y-3 h-auto cursor-pointer hover:shadow-md transition">
+           <div class="flex justify-between">
+               <img src="./B13-A5-Github-Issue-Tracker/assets/Open-Status.png" alt="open status">
+               <div class="badge badge-soft badge-error">HIGH</div>
+           </div>
+           <h3 class="text-xl font-bold line-clamp-2">Implement real-time notifications</h3>
+           <p class="line-clamp-2 text-gray-400">Add WebSocket support for real-time notifications when issues are
+               updated or commented on.</p>
+           <div class="flex gap-3 mt-3 flex-wrap">
+               <div class="badge badge-soft badge-success">
+                   <span class="mr-1"><i class="fa-solid fa-wand-magic-sparkles"></i></span>ENHANCEMENT
+               </div>
+           </div>
+           <hr>
+           <p>alex_perf</p>
+           <p>1/23/2024</p>
+       </div>
 </body>
 
+
+
+
 </html>
+
+
