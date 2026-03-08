@@ -160,8 +160,13 @@ const displayModal = (data) => {
     <div
            onclick="loadModal(${data.id})" class=" card border-t-4 ${data.status === "open" ? "border-green-500" : "border-[#a855f7]"} shadow-sm p-5 space-y-3 h-80 cursor-pointer hover:shadow-md transition">
             <div class="flex justify-between">
-                <img src="./B13-A5-Github-Issue-Tracker/assets/${data.status === "open" ? "Open-Status.png" : "Closed-Status.png"} alt=${data.status}">
-                <div class="badge badge-soft badge-error">HIGH</div>
+                <img src="./B13-A5-Github-Issue-Tracker/assets/${data.status === "open" ? "Open-Status.png" : "Closed-Status.png"}" alt="${data.status}">
+                <div class="badge badge-soft ${data.priority === "high" ? "badge-error" :
+                data.priority === "medium" ? "badge-warning" :
+                    "badge-success"}">
+
+                    ${data.priority.toUpperCase()}
+                </div>
             </div>
             <h3 class="text-xl font-bold line-clamp-2">${data.title}</h3>
             <p class="line-clamp-2 text-gray-400">${data.description}</p>
