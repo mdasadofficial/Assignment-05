@@ -38,7 +38,8 @@ const loadCards = () => {
 
 // Card display function
 const displayCards = (cards) => {
-    loadSpinner.classList.add("hidden");
+    // loadSpinner.classList.add("hidden");
+    // loadSpinner.classList.remove("flex");
     const issuesContainer = document.getElementById("issuesContainer");
     // Issues count update
     issuesCount.innerText = cards.length;
@@ -151,6 +152,8 @@ const loadModal = (id) => {
 };
 
 const displayModal = (data) => {
+    loadSpinner.classList.add("hidden");
+    loadSpinner.classList.remove("flex");
     console.log(data.id);
     myModal.innerHTML = ""
     const div = document.createElement('div')
@@ -162,8 +165,8 @@ const displayModal = (data) => {
             <div class="flex justify-between">
                 <img src="./B13-A5-Github-Issue-Tracker/assets/${data.status === "open" ? "Open-Status.png" : "Closed-Status.png"}" alt="${data.status}">
                 <div class="badge badge-soft ${data.priority === "high" ? "badge-error" :
-                data.priority === "medium" ? "badge-warning" :
-                    "badge-success"}">
+            data.priority === "medium" ? "badge-warning" :
+                "badge-success"}">
 
                     ${data.priority.toUpperCase()}
                 </div>
@@ -173,9 +176,9 @@ const displayModal = (data) => {
              ${data.labels.map(label => `
 
                 <div class="badge badge-soft ${label === "bug" ? "badge-error" :
-            label === "enhancement" ? "badge-success" :
-                label === "documentation" ? "badge-info" :
-                    "badge-secondary"}">
+                        label === "enhancement" ? "badge-success" :
+                            label === "documentation" ? "badge-info" :
+                                "badge-secondary"}">
 
                     <span class="mr-1">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -212,6 +215,8 @@ const searchBtn = document.getElementById("searchBtn")
 const searchInput = document.getElementById("searchInput")
 
 searchBtn.addEventListener('click', async () => {
+    loadSpinner.classList.remove("hidden");
+    loadSpinner.classList.add("flex");
     const inputValue = searchInput.value.trim();
     if (inputValue === "") {
         displayCards(allIssues);
