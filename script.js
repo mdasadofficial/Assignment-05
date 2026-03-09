@@ -38,8 +38,8 @@ const loadCards = () => {
 
 // Card display function
 const displayCards = (cards) => {
-    // loadSpinner.classList.add("hidden");
-    // loadSpinner.classList.remove("flex");
+    loadSpinner.classList.add("hidden");
+    loadSpinner.classList.remove("flex");
     const issuesContainer = document.getElementById("issuesContainer");
     // Issues count update
     issuesCount.innerText = cards.length;
@@ -138,8 +138,8 @@ closedBtn.addEventListener("click", () => {
 const myModal = document.getElementById("my_modal_5")
 const loadModal = (id) => {
 
-    loadSpinner.classList.remove("hidden");
-    loadSpinner.classList.add("flex");
+    loadSpinner.classList.add("hidden");
+    loadSpinner.classList.remove("flex");
 
     fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`)
         .then((res) => res.json())
@@ -201,7 +201,7 @@ const displayModal = (data) => {
       </form>
     </div>
   </div>
-        </div>
+        
 
 
 `
